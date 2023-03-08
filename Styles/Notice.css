@@ -1,0 +1,12 @@
+.Notice {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: 40px;
+  font-size: 24px;
+  color: indianred;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid indianred;
+  border-radius: 20px;
+}/*# sourceMappingURL=Notice.css.map */

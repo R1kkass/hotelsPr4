@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/01.css" rel="stylesheet">
+    <link href="styles/Notice.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Header__container">
+        <div class="Header">
+            <div onclick="modal()">
+                Создать комментарий
+            </div>
+        </div>
+    </div>
+    <div id='root'></div>
+    <div onclick="modal()" class="Form">
+    <div class="Form__content">
+            <div class="Form__input">
+                <div>
+                    <p>Имя</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>Текст</p>
+                    <div class="TextInput"id="TextInput" contenteditable="true"></div>
+                </div>
+                <div>
+                    <p>Дата</p>
+                    <input type="date" placeholder="Дата">
+                </div>
+                <div>
+                    <p>Время</p>
+                    <input type="time" placeholder="Дата">
+                </div>
+                <div>
+                    <button onclick="add()">Добавить запись</button>
+                </div>
+                <div id="err">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="validate.js"></script>
+    <script src="svg.js"></script>
+    <script src="add.js"></script>
+    <script src="like.js"></script>
+    <script src="date.js"></script>
+    <script src="delete.js"></script>
+    <script src="01.js"></script>
+    <script src="UI.js"></script>
+    <script src="listeners.js"></script>
+        
+</body>
+</html>

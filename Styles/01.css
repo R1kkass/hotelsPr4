@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+
+.Form {
+  position: fixed;
+  height: 150px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(67, 67, 67, 0.7);
+}
+.Form h2 {
+  color: white;
+}
+.Form__content {
+  width: 80%;
+  border-radius: 20px;
+  background-color: indigo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding: 10px;
+}
+.Form__content input {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border: none;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+  font-size: 16px;
+  box-shadow: 0 0 5px 1px indianred;
+}
+.Form__content input:hover, .Form__content input:focus {
+  text-shadow: 0 0 5px indianred;
+  box-shadow: 0 0 5px 3px indianred;
+}
+.Form__content button {
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: calc(100% + 15px);
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: 1px solid indianred;
+  outline: none;
+  border-radius: 5px;
+}
+.Form__content button:hover {
+  box-shadow: 0 0 5px 3px indianred;
+  background-color: indianred;
+}
+.Form__input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+.Form__input p {
+  font-size: 20px;
+  color: white;
+}
+
+.Header {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 5px 2px indigo;
+  height: 60px;
+  background-color: indigo;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Header div {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 30px;
+  border-radius: 10px;
+}
+.Header div:hover {
+  box-shadow: 0 0 5px 3px indianred;
+  background-color: indianred;
+}
+
+.Note {
+  width: 500px;
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid indigo;
+  box-shadow: 0 0 5px 2px indigo;
+  margin-top: 20px;
+  border-radius: 20px;
+  color: white;
+  background-color: indigo;
+}
+.Note__text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid indianred;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid indianred;
+}
+.Note .commentForm {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Note .commentForm div {
+  margin: 5px 0 5px 0;
+}
+.Note input {
+  border: none;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+.Note input:hover, .Note input:active {
+  box-shadow: 0 0 5px 2px indianred;
+}
+.Note button {
+  height: 30px;
+  background: none;
+  color: white;
+  border: 1px solid indianred;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Note button:hover {
+  background-color: indianred;
+  color: white;
+  box-shadow: 0 0 5px 2px indianred;
+}
+.Note .Comment {
+  min-height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  padding: 5px;
+  justify-content: space-between;
+}
+.Note .Comment:hover {
+  background-color: rgb(121, 0, 207);
+}
+.Note .Comment:hover button {
+  display: flex;
+}
+.Note .Comment__time {
+  max-width: 200px;
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+.Note .Comment__buttons {
+  display: flex;
+  align-items: center;
+}
+.Note .Comment__buttons button {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.Note .Comment__dateName {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Note .Comment__dateName p {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.Note .Comment__dateName div:nth-child(1) {
+  display: flex;
+}
+.Note .Comment__dateName div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.Note .Comment button {
+  display: none;
+}
+.Note__dateUser {
+  display: flex;
+  justify-content: space-between;
+}
+.Note__dateUser div:nth-child(2) {
+  font-size: 14px;
+}
+.Note__dateUser div:nth-child(1) {
+  font-size: 14px;
+}
+.Note__buttons {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.Note__buttons button {
+  margin-right: 10px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header__container {
+  height: 60px;
+}
+
+.TextInput {
+  width: 80%;
+  min-height: 40px;
+  outline: none;
+  border: none;
+  width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px 1px indianred;
+}
+.TextInput:hover, .TextInput:focus {
+  text-shadow: 0 0 5px indianred;
+  box-shadow: 0 0 5px 3px indianred;
+}/*# sourceMappingURL=01.css.map */
