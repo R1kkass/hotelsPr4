@@ -1,17 +1,17 @@
 function add() {
     const date = new Date();
     const inputs = document
-        .querySelector(".Form__input")
+        .querySelector(".Form__content")
         .querySelectorAll("input");
 
     let arr = [];
+    console.log(inputs[2].value, inputs[1].value);
     if (validate(inputs[0].value, TextInput.innerHTML)) {
-        if (inputs[2].value && inputs[3].value) {
-            let join = [
-                ...inputs[2].value.split("-"),
-                ...inputs[3].value.split(":"),
-            ];
-            arr = [join];
+        if (inputs[1]?.value && inputs[2]?.value) {
+            arr = [
+                ...inputs[1].value.split("-"),
+                ...inputs[2].value.split(":"),
+            ];;
         } else {
             arr = [
                 date.getFullYear(),
@@ -30,7 +30,7 @@ function add() {
         });
         localStorage.setItem("notes", JSON.stringify(notes));
         addNote();
-        document.querySelector(".Form").style.display = "none";
+        modal()
         err.innerHTML = "";
     } else {
         err.innerHTML = "<p>Поля пусты</p>";

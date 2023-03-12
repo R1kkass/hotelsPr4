@@ -2,7 +2,7 @@ addEventListener("keydown", function (e) {
     setKeys.add(e.keyCode);
     if (
         [...setKeys][0] == 13 &&
-        document.querySelector(".Form").style.display == "flex"
+        document.querySelector(".Form").style.opacity == "1"
     ) {
         add();
     }
@@ -12,9 +12,7 @@ addEventListener("keyup", function (e) {
     setKeys.delete(e.keyCode);
 });
 
-const formInput = document
-    .querySelector(".Form__input")
-    .querySelectorAll("input");
+const formInput = document.querySelector(".Form__content").querySelectorAll("input");
 
 formInput[0].addEventListener("input", () => {
     validateInput(0);
@@ -34,3 +32,11 @@ function stopDefAction(evt) {
     console.log(evt);
     evt.stopPropagation();
 }
+
+
+addEventListener('keydown', (e)=>{
+    if(e.keyCode==27){
+        modal()
+    }
+})
+

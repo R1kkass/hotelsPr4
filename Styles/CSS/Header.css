@@ -1,0 +1,26 @@
+.Header {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 5px 2px indigo;
+  height: 60px;
+  background-color: indigo;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Header div {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.Header__container {
+  height: 60px;
+}/*# sourceMappingURL=Header.css.map */

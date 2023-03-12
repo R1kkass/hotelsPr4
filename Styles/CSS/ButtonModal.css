@@ -1,0 +1,25 @@
+.ButtonModal {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.3s;
+  height: 30px;
+  border: 1px solid indianred;
+  box-shadow: 0 0 5px 3px indianred;
+  background-color: indianred;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 5px 2px indianred;
+  left: 10px;
+}
+.ButtonModal:hover {
+  box-shadow: 0 0 5px 3px indianred;
+  background: none;
+  color: indianred;
+}/*# sourceMappingURL=ButonModal.css.map */
