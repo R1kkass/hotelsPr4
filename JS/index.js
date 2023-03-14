@@ -49,6 +49,7 @@ function addNote() {
                 <div>
                     <input placeholder="Текст" type="time"/>
                 </div>
+                <p id='errorComment${i}'></p>
                 <button onClick="addComment(${i})">Отправить</button>
             </div>
         `;
