@@ -62,33 +62,34 @@ function addNote() {
             divCom.innerHTML = `
                 <div class="Comment">
                     <div class="Comment__dateName">
+                    <div>
+                            ${notes[i].comment[j].name}
+                            <p>
+                            ${dateFn(notes[i].comment[j].time)}
+                        </p>
+                        </div>
                         <div>
                             <p class="Comment__time">
                                 ${notes[i].comment[j].text}
                             </p>
-                            <p>
-                                ${dateFn(notes[i].comment[j].time)}
-                            </p>
+                            <div class="Comment__buttons">
+                            <button onclick="deleteComment(${i}, ${j})">${svgDelete}</button>
+                            <button 
+                                class="likeComment"
+                                onclick="likeComment(${i}, ${j})" 
+                                style="color: white; ;background: ${
+                                    notes[i].comment[j]?.like
+                                        ? "indianred; display: flex"
+                                        : "none"
+                                }"
+                            >
+                                ${svgLike}
+                            </button>  
                         </div>
-                        <div>
-                            ${notes[i].comment[j].name}
-                              
                         </div>
+                        
                     </div>
-                    <div class="Comment__buttons">
-                        <button onclick="deleteComment(${i}, ${j})">${svgDelete}</button>
-                        <button 
-                            class="likeComment"
-                            onclick="likeComment(${i}, ${j})" 
-                            style="color: white; ;background: ${
-                                notes[i].comment[j]?.like
-                                    ? "indianred; display: flex"
-                                    : "none"
-                            }"
-                        >
-                            ${svgLike}
-                        </button>  
-                    </div>
+                   
                 </div>
             `;
             commentsDiv.appendChild(divCom);
