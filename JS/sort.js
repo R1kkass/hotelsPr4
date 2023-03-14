@@ -1,6 +1,6 @@
 
 
-function sort(def) {
+function sort() {
     let res;
     if (selectSort.value == "Сначала новые") {
         res = JSON.parse(localStorage.getItem("notes")).sort((a, b) => {

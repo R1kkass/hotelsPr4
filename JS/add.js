@@ -31,8 +31,10 @@ function add() {
             text: TextInput.innerHTML,
             comment: [],
         });
+        
         localStorage.setItem("notes", JSON.stringify(notes));
-        addNote();
+        sort()
+        selectSort.value="Сортировать"
         modal();
         err.innerHTML = "";
     } else {
@@ -41,8 +43,11 @@ function add() {
 }
 
 function addComment(id) {
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
     const inps = document.querySelectorAll(".Note");
     let inp = inps[id].querySelectorAll("input");
+    console.log(id);
     const date = new Date();
     let arr = [];
     if (validate(inp[0].value, inp[1].value)) {
@@ -67,7 +72,7 @@ function addComment(id) {
                 like: false,
             });
             localStorage.setItem("notes", JSON.stringify(notes));
-            addNote();
+            sort()
             inp[0].placeholder=""
             inp[1].placeholder=""
 
