@@ -7,10 +7,14 @@ function add() {
     let arr = [];
     if (validate(inputs[0].value, TextInput.innerHTML)) {
         if (inputs[1]?.value && inputs[2]?.value) {
-            arr = [
+            let join = [
                 ...inputs[1].value.split("-"),
                 ...inputs[2].value.split(":"),
             ];
+            for (let i = 0; i < join.length; i++) {
+                arr.push(Number(join[i]<10 ? '0'+String(join[i]) : join[i]));
+                console.log(arr);
+            }
         } else {
             arr = [
                 date.getFullYear(),
@@ -44,7 +48,10 @@ function addComment(id) {
     if (validate(inp[0].value, inp[1].value)) {
         if (validate(inp[2].value, inp[3].value)) {
             let join = [...inp[2].value.split("-"), ...inp[3].value.split(":")];
-            arr = join;
+            for (let i = 0; i < join.length; i++) {
+                arr.push(Number(join[i]));
+                console.log(arr);
+            }
         } else {
             arr = [
                 date.getFullYear(),

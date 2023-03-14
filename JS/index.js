@@ -2,9 +2,11 @@ let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
 const setKeys = new Set();
 
-
-
 function addNote() {
+
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+    
     root.innerHTML = "";
     for (let i = 0; i < notes.length; i++) {
         const newDiv = document.createElement("div");
@@ -96,4 +98,5 @@ function addNote() {
     }
 }
 
+sort()
 addNote();

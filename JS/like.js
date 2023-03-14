@@ -1,4 +1,5 @@
 function likeComment(idNote, id) {
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
     const likes = document
         .querySelectorAll(".Note")
         [idNote].querySelectorAll(".likeComment")[id];
@@ -14,9 +15,13 @@ function likeComment(idNote, id) {
 }
 
 function like(id) {
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
     const likes = document
         .querySelectorAll(".Note")
         [id].querySelector(".Note__buttons");
+    console.log(notes);
+
+    console.log(id);
     if (notes[id].like) {
         notes[id].like = false;
         likes.style.background = "none";

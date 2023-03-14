@@ -1,0 +1,13 @@
+.SelectSort {
+  height: 35px;
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid indianred;
+  outline: none;
+}
+.SelectSort option {
+  height: 20px;
+}
+.SelectSort option:hover {
+  background-color: red;
+}/*# sourceMappingURL=Select.css.map */

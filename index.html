@@ -12,6 +12,7 @@
     <link href="Styles/CSS/Header.css" rel="stylesheet">
     <link href="Styles/CSS/ButtonModal.css" rel="stylesheet">
     <link href="Styles/CSS/Form.css" rel="stylesheet">
+    <link href="Styles/CSS/Select.css" rel="stylesheet">
     <title>Комментарии</title>
 </head>
 <body>
@@ -23,6 +24,16 @@
                     <span class="slider round"></span>
                 </label>
                 <p>Сменить тему</p>
+            </div>
+            <div>
+                <select class="SelectSort" id="selectSort" onchange="sort()">
+                    <option disabled selected>Сортировать</option>
+
+                    <option>Сначала новые</option>
+                    <option>Сначала старые</option>
+                    <option>По пользователям</option>
+                    <option>Сбросить</option>
+                </select>
             </div>
         </div>
     </div>
@@ -58,6 +69,7 @@
                 </div>
         </div>
     </div>
+    <script src="JS/sort.js"></script>
     <script src="JS/validate.js"></script>
     <script src="JS/svg.js"></script>
     <script src="JS/add.js"></script>
