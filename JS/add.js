@@ -5,7 +5,6 @@ function add() {
         .querySelectorAll("input");
 
     let arr = [];
-    console.log(inputs[2].value, inputs[1].value);
     if (validate(inputs[0].value, TextInput.innerHTML)) {
         if (inputs[1]?.value && inputs[2]?.value) {
             arr = [
@@ -34,7 +33,6 @@ function add() {
         err.innerHTML = "";
     } else {
         err.innerHTML = "<p>Поля пусты</p>";
-        console.log(err);
     }
 }
 
@@ -72,5 +70,6 @@ function addComment(id) {
     else{
         inp[0].placeholder="Поле пустое"
         inp[1].placeholder="Поле пустое"
+        document.querySelector('.commentForm').querySelector('p').innerHTML="Поля пусты"
     }
 }

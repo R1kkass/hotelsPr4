@@ -29,7 +29,6 @@ TextInput.addEventListener("input", () => {
 });
 
 function stopDefAction(evt) {
-    console.log(evt);
     evt.stopPropagation();
 }
 

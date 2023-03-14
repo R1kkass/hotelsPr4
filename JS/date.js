@@ -1,6 +1,5 @@
 function dateFn(day) {
     const dates = new Date();
-    console.log(day);
     if (
         dates.getDate() == day[2] &&
         dates.getMonth() + 1 == day[1] &&

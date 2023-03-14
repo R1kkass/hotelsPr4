@@ -1,5 +1,4 @@
 function deleteComment(idNote, id) {
-    console.log(id);
     notes[idNote].comment = notes[idNote].comment.filter((key, index) => {
         return index != id;
     });
@@ -9,7 +8,6 @@ function deleteComment(idNote, id) {
 
 function deleteMainComment(idNote) {
     notes = notes.filter((key, index) => {
-        console.log(index != idNote);
         return index != idNote;
     });
 

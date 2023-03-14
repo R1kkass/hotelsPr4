@@ -2,7 +2,6 @@ document.querySelector(".Form").style.display == "none";
 
 function toggleComment(id) {
     const inps = document.querySelectorAll(".Note");
-    console.log(inps[id].querySelector(".commentForm").style.display);
     if (inps[id].querySelector(".commentForm").style.display == "flex") {
         inps[id].querySelector(".commentForm").style.display = "none";
     } else {
@@ -11,7 +10,6 @@ function toggleComment(id) {
 }
 
 function modal() {
-    console.log("e");
     if (document.querySelector(".Form").style.opacity == "1") {
         document.querySelector(".Form").style.opacity = "0";
         document.querySelector(".Form").style.zIndex = "-1";

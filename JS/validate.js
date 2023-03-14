@@ -1,6 +1,5 @@
 function validate(...args) {
     for (let i = 0; i < args.length; i++) {
-        console.log();
         if (args[i].length < 3) {
             return false;
         }

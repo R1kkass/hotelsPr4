@@ -49,7 +49,7 @@ function addNote() {
                 <div>
                     <input placeholder="Текст" type="time"/>
                 </div>
-                <p id='errorComment${i}'></p>
+                <p></p>
                 <button onClick="addComment(${i})">Отправить</button>
             </div>
         `;
@@ -57,7 +57,6 @@ function addNote() {
         const commentsDiv = document.createElement("div");
         for (let j = 0; j < notes[i].comment.length; j++) {
             const divCom = document.createElement("div");
-            console.log(dateFn(notes[i].comment[j].time));
             divCom.innerHTML = `
                 <div class="Comment">
                     <div class="Comment__dateName">
